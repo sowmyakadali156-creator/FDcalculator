@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FD Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FD Calculator</h1>
+        <div class="slider-box">
+            <label>Investment Amount</label>
+            <div class="value">₹<span id="amountValue">1000000</span></div>
+            <input type="range" id="amount"
+                   min="1000"
+                   max="1000000"
+                   value="1000000"
+                   step="1000">
+        </div>
+        <div class="slider-box">
+            <label>Rate of Interest (%)</label>
+            <div class="value"><span id="roiValue">6.5</span>%</div>
+            <input type="range" id="roi"
+                   min="1"
+                   max="18"
+                   value="6.5"
+                   step="0.1">
+        </div>
+        <div class="slider-box">
+            <label>Time Period (Years)</label>
+            <div class="value"><span id="timeValue">6</span> Years</div>
+            <input type="range" id="time"
+                   min="1"
+                   max="65"
+                   value="6"
+                   step="1">
+        </div>
+        <button class="btn" onclick="calculateFD()">Invest Now</button>
+        <div class="output-section">
+            <p>Investment amount:<span id="invested-amount">--</span></p>
+            <p>Estimated returns:<span id="estimated-amount">--</span></p>
+            <p>Total amount:<span id="total-value">--</span></p>
+        </div>
+    </div>
+    <script  src="script.js">
+
+        /*const amount = document.getElementById("amount");
+        const roi = document.getElementById("roi");
+        const time = document.getElementById("time");
+        amount.oninput = () => {
+            document.getElementById("amountValue").innerText = amount.value;
+        };
+        roi.oninput = () => {
+            document.getElementById("roiValue").innerText = roi.value;
+        };
+        time.oninput = () => {
+            document.getElementById("timeValue").innerText = time.value;
+        };*/
+/*document.addEventListener("DOMContentLoaded", function () {
+
+    const amount = document.getElementById("amount");
+    const roi = document.getElementById("roi");
+    const time = document.getElementById("time");
+
+    amount.addEventListener("input", function () {
+        document.getElementById("amountValue").innerText =
+            parseFloat(this.value).toLocaleString("en-IN");
+    });
+
+    roi.addEventListener("input", function () {
+        document.getElementById("roiValue").innerText =
+            parseFloat(this.value).toFixed(1);
+    });
+
+    time.addEventListener("input", function () {
+        document.getElementById("timeValue").innerText = this.value;
+    });
+
+});
+
+function calculateFD() {
+
+    const p = parseFloat(document.getElementById("amount").value);
+    const r = parseFloat(document.getElementById("roi").value);
+    const t = parseFloat(document.getElementById("time").value);
+
+    const n = 4; 
+
+    const total = p * Math.pow((1 + (r / 100) / n), n * t);
+    const interest = total - p;
+
+    document.getElementById("invested-amount").innerText =
+        " ₹" + Math.round(p).toLocaleString("en-IN");
+
+    document.getElementById("estimated-amount").innerText =
+        " ₹" + Math.round(interest).toLocaleString("en-IN");
+
+    document.getElementById("total-value").innerText =
+        " ₹" + Math.round(total).toLocaleString("en-IN");
+}*/
+    </script>
+</body>
+</html>
